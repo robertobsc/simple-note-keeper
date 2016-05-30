@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">  -->
+
+<!-- OBS: log4j-tomcat.xml é o único arquivo que existe no .war  -->
+<!-- A configuração log4j.xml do jboss é realizada no próprio console -->
+
+<log4j:configuration  debug="true" xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+   <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+      <param name="Target" value="System.out" />
+      <param name="Threshold" value="DEBUG" />
+      <layout class="org.apache.log4j.PatternLayout">
+         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+      </layout>
+   </appender>
+
+	<logger name="com.robertobsc">
+		<level value="DEBUG"/>
+		<appender-ref ref="consoleAppender"/>		
+	</logger>
+	
+    <root>
+    	<level value="DEBUG"/>
+    	<appender-ref ref="consoleAppender"/>
+    </root>
+    
+</log4j:configuration>
