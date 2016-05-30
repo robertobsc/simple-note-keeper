@@ -7,6 +7,10 @@ public class Category extends Entity{
 	private String name;
 	private String color;
 
+	@Override
+	public String getKey() {
+		return getName();
+	}
 	public String getName() {
 		return name;
 	}

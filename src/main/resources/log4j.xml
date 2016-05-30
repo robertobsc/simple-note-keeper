@@ -15,8 +15,7 @@
    </appender>
 
 	<logger name="com.robertobsc">
-		<level value="DEBUG"/>
-		<appender-ref ref="consoleAppender"/>		
+		<level value="DEBUG"/>		
 	</logger>
 	
     <root>

@@ -27,6 +27,19 @@ public class Note extends Entity {
 		this.category = category;
 	}
 
+	public static Note fromJson(String json){
+		return Entity.fromJson(Note.class, json);
+	}
+	public static Note save(Note note) {
+		
+		Category cat = note.getCategory();
+		if (cat != null) {
+			cat = Category.get(cat.getKey());
+			note.setCategory(cat);
+		}
+		
+		return Entity.save(note);
+	}
 	public static Note get(String key) {
 		return Entity.get(Note.class, key);
 	}

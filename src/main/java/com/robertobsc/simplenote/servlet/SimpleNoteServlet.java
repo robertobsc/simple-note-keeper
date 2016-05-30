@@ -45,8 +45,8 @@ public class SimpleNoteServlet extends HttpServlet {
 		String json = req.getReader().lines().collect(Collectors.joining(" "));
 		
 		Stream.of(json)
-			  .map(j -> Entity.fromJson(Note.class, j))
-			  .forEach(Entity::save);
+			  .map(Note::fromJson)
+			  .forEach(Note::save);
 		
 		resp.getWriter().println("Item saved");
 		logger.debug("<< /notes/post");
