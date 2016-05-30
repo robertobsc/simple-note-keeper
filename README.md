@@ -4,6 +4,7 @@ A really simple personal note keeper
 ##Different Implementations
 
 * Pure Java with servlet and in memory data registry. API Only
+	
 	GET /simple-note-keeper/categories: return all saved categories
 	POST /simple-note-keeper/categories: saves a category
 		Excpected json: { "name": "Tech" ,  "color" : "black"}
