@@ -1,0 +1,7 @@
+/target/
+org.eclipse.*
+.classpath
+.project
+rebel.xml
+.settings
+.metadata
